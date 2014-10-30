@@ -1,0 +1,13 @@
+da9dd7667b0106c56d7c8b7384d098fa *DESCRIPTION
+8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
+494892bd0623c5e21a042c7064112090 *R/dhermite.R
+043f984fe5d3dd3c9cd910d7a429ec6d *R/int.hermite.R
+177b24f32868b44875765e47598a3f5d *R/phermite.R
+82ee0a0ca37b4dcc56c32185ad73ad14 *R/qhermite.R
+6bceb8d94d64fabab1e259987506b1da *R/rhermite.R
+d202f0bb488f6ec7b3db703e3811cd39 *man/dhermite.Rd
+0bfdca2d89abe0abb97f7e76d010c1e8 *man/hermite-internal.Rd
+41bf12db39d005e0fdb3eaf96bf569ae *man/hermite-package.Rd
+004e7bb69fce4e70a2eee5e93f3adb1f *man/phermite.Rd
+56e4aa1e0a5f6986fda56b60356d6aff *man/qhermite.Rd
+bf40e5424612bb144e6a629dc4fba2ef *man/rhermite.Rd
