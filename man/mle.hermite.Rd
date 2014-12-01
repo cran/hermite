@@ -1,34 +1,42 @@
 \encoding{utf8} 
-\name{rhermite}
-\alias{rhermite}
+\name{mle.hermite}
+\alias{mle.hermite}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Random generation for the generalized Hermite distribution
+Maximum likelihood estimation for the generalized Hermite distribution
 }
 \description{
-Random generation for the generalized Hermite distribution with parameters \code{a}, \code{b} and \code{m}.
+Maximum likelihood estimation for the generalized Hermite distribution and likelihood ratio test for Poisson assumption.
 }
 \usage{
-rhermite(n, a, b, m=2)
+mle.hermite(x, a=NA, b=NA, m=NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{n}{
-number of observations.
+  \item{x}{
+vector containing the sample observations.
 }
   \item{a}{
-first parameter for the Hermite distribution.
+initial value for the first parameter for the Hermite distribution. It's default value is \code{NA}.
 }
   \item{b}{
-second parameter for the Hermite distribution.
+initial value for the second parameter for the Hermite distribution. It's default value is \code{NA}.
 }
   \item{m}{
-Degree of the generalized Hermite distribution. Its default value is \code{2}, corresponding to the standard Hermite distribution.
+Order of the generalized Hermite distribution. Its default value is \code{NA}.
 }
 }
 
+\details{
+If initial values are supplied they are used to obtain the maximum likelihood estimates for \code{a} and \code{b}. If no initial values are supplied, the naive estimates detailed in Puig (2003) are taken as initial values.
+}
+
 \value{
-A vector containing \code{n} random deviates from a generalized Hermite distribution.
+A list with five elements, the first containing the 
+estimates of parameters \code{a} and \code{b}. The second element contains the 
+maximum likelihood value and the third element contains the Hessian matrix. The 
+fourth element of the returned value contains the likelihood ratio test 
+statistic \eqn{W} and the last element is the p-value of the likelihood ratio test. 
 }
 \references{
 Kemp C D, Kemp A W. Some Properties of the Hermite Distribution. Biometrika 1965;\bold{52} (3-4):381–394.

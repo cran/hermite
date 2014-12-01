@@ -1,14 +1,20 @@
 int.hermite <-
   function(x, a, b, m)
   {
-    if(a < 0 || b < 0 || m < 0) stop ("parameters should be positive")
-    if (floor(m) != m || m < 2) stop ("improper m parameter specification")
     if (x < 0) return(0)
     p <- vector()
     mu <- a + m*b
     d  <- (a+(m^2)*b)/(a+m*b)
+    if (is.nan(d))
+    {
+      if (x==0) return(1)
+      if (x!=0) return(0)
+    }
     p0 <- exp(mu*(-1+(d-1)/m))
-    p[1:(m-1)] <- vapply(1:(m-1), function(k) p0*((mu^k)/(factorial(k)))*(((m-d)/(m-1))^k),1)
+    if (m > 1)
+    {
+      p[1:(m-1)] <- vapply(1:(m-1), function(k) p0*((mu^k)/(factorial(k)))*(((m-d)/(m-1))^k),1)
+    }
     if (x >= m)
     {
       for(k in m:x)
