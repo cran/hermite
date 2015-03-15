@@ -15,6 +15,7 @@ cofi(p, a, b, m=2)
 
 \details{These functions are not to be called by the user}
 \seealso{
-\code{\link{hermite-package}}, \code{\link{dhermite}}, \code{\link{phermite}}, \code{\link{qhermite}}, \code{\link{rhermite}}
+\code{\link{hermite-package}}, \code{\link{dhermite}}, \code{\link{phermite}}, 
+\code{\link{qhermite}}, \code{\link{rhermite}}, \code{\link{glm.hermite}}
 }
 \keyword{internal}
