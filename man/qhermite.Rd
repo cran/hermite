@@ -33,14 +33,10 @@ logical; if TRUE (default), probabilities are \eqn{P[X \le x]}, otherwise,
 }
 }
 
-\details{
-The quantile is right continuous: \code{qhermite(p, a, b, m)} is the smallest 
-integer \eqn{x} such that \eqn{P(X \le x) \ge p}.
-}
-
 \value{
-  Density for the generalized Hermite distribution with parameters \code{a}, 
-  \code{b} and \code{m}.
+  The smallest integer \eqn{x} such that 
+  \eqn{P(X \le x) \ge p} (or such that \eqn{P(X \le x) \ge 1-p} if \code{lower.tail} is set to \code{FALSE}), where X is a generalized Hermite random variable with 
+  parameters \code{a}, \code{b} and \code{m}.
   
 }
 

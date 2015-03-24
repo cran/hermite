@@ -73,7 +73,9 @@ David Moriña, Manuel Higueras, Pedro Puig and María Oliveira
 }
 
 \seealso{
-\code{\link{Distributions}} for some other distributions, \code{\link{dhermite}}, \code{\link{phermite}}, \code{\link{qhermite}}, \code{\link{hermite-package}}, \code{\link{glm.hermite}}
+\code{\link{Distributions}} for some other distributions, 
+\code{\link{dhermite}}, \code{\link{phermite}}, \code{\link{qhermite}}, 
+\code{\link{hermite-package}}, \code{\link{glm.hermite}}
 }
 \examples{
 rnd <- rhermite(1000, 0.8, 0.3)

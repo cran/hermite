@@ -8,7 +8,9 @@
 \description{
   \code{glm.hermite} is used to fit generalized linear models with count 
   responses following a Hermite distribution, specified by giving a symbolic 
-  description of the linear predictor.
+  description of the linear predictor. A \code{summary} method providing the 
+  most meaningful information on the fitted model is available for objects of 
+  class \code{glm.hermite}.
 }
 \usage{
   glm.hermite(formula, data, link="log", start=NULL, m = NULL)
@@ -38,7 +40,8 @@ case it will be estimated inside the function.
 }
 
 \value{
-  \code{glm.hermite} returns a list containing the following components:
+  \code{glm.hermite} returns an object of class \code{glm.hermite}, which is a 
+  list including the following components:
 \itemize{
   \item{coefs}{
 the vector of coefficients.

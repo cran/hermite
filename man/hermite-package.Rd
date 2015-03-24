@@ -7,17 +7,16 @@
 Generalized Hermite distribution
 }
 \description{
-Density, distribution, quantile functions, random generation and maximum 
-likelihood estimation for the generalized Hermite distribution, 
-and Hermite regression.
+Probability mass, distribution and quantile functions; random generation; 
+and regression models for the generalized Hermite distribution.
 
 }
 \details{
 \tabular{ll}{
 Package: \tab hermite\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-10-02\cr
+Version: \tab 1.1.0\cr
+Date: \tab 2015-03-24\cr
 License: \tab GPL version 2 or newer\cr
 LazyLoad: \tab yes\cr
 }
@@ -33,6 +32,9 @@ parametrized in terms of the mean \eqn{\mu} and the index of dispersion
 where \eqn{P(X=0) = exp(\mu (-1+ \frac{d-1}{m}))}, \code{m} is the degree of 
 the generalized Poisson distribution and \eqn{[x/m]} is the integer part of
 \eqn{x/m}.
+
+The package is able to fit Hermite regression models as well, by means of the 
+function  \code{\link{glm.hermite}}, also in the presence of covariates.
 }
 \author{
 David Moriña, Manuel Higueras, Pedro Puig and María Oliveira

@@ -1,5 +1,8 @@
 exportPattern("^[[:alpha:]]+")
 
+S3method(print, summary.glm.hermite)
+S3method(summary, glm.hermite)
+
 # Import all packages listed as Imports or Depends
 import(
   maxLik

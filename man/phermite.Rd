@@ -34,8 +34,8 @@ logical; if TRUE (default), probabilities are \eqn{P[X \le x]}, otherwise,
 }
 
 \value{
-  Distribution for the Hermite distribution with parameters \code{a}, \code{b} 
-  and \code{m}.
+  Probability for a generalized Hermite random varible with parameters \code{a},
+  {b} and \code{m} to be lower (or greater) than \code{q}.
   
 }
 

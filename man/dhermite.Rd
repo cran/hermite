@@ -30,8 +30,8 @@ corresponding to the standard Hermite distribution.
 }
 
 \value{
-  Density for the generalized Hermite distribution with parameters \code{a}, 
-  \code{b} and \code{m}.
+  Probability for a generalized Hermite random varible with parameters \code{a}, 
+  \code{b} and \code{m} of taking \code{x} counts.
   
 }
 

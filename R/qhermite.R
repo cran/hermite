@@ -14,16 +14,23 @@ qhermite <- function(p, a, b, m=2, lower.tail=TRUE)
     {
       f <- 0
       q[j] <- -1
-      if ((p[j] > 1 | p[j] < 0) & !is.na(a) & !is.na(b))
+      if ((p[j] > 1 | p[j] < 0))
       {
         warning("NaNs produced")
-        return(NaN)
+        q[j] <- NaN
       }
-      if (p[j] == 1 & !is.na(p[j]) & !is.na(a) & !is.na(b)) return(Inf)
-      while(f<p[j])
+      if (p[j] == 1)
       {
-        q[j] <- q[j] + 1
-        f <- dhermite(q[j],a,b,m) + f
+        q[j] <- Inf
+      } else {
+        if(p[j] < 1)
+        {
+          while(f<p[j])
+          {
+            q[j] <- q[j] + 1
+            f <- dhermite(q[j],a,b,m) + f
+          }
+        }
       }
       j <- j + 1
     }
@@ -32,15 +39,16 @@ qhermite <- function(p, a, b, m=2, lower.tail=TRUE)
   {
     while(!is.na(p[j]))
     {
-      if ((p[j] > 1 | p[j] < 0) & !is.na(a) & !is.na(b))
+      if ((p[j] > 1 | p[j] < 0))
       {
         warning("NaNs produced")
-        return(NaN)
+        q[j] <- NaN
+      } else {
+        q[j] <- ifelse(p[j] != 1, floor(cofi(p[j], a, b, m)) + 1, Inf)
       }
-      if (p[j] == 1 & !is.na(p[j]) & !is.na(a) & !is.na(b)) return(Inf)
-      q[j] <- floor(cofi(p[j], a, b, m)) + 1
       j <- j + 1
     }
   }
-    return(q)
+  q <- ifelse(is.nan(q) | q>=0, q, 0)
+  return(q)
 }

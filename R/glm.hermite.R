@@ -1,5 +1,6 @@
 glm.hermite <- function (formula, data, link = "log", start = NULL, m = NULL) 
 {
+  Call <- match.call()
   m.fixed   <- FALSE
   intercept <- FALSE
   if (!is.null(m)) 
@@ -118,6 +119,9 @@ glm.hermite <- function (formula, data, link = "log", start = NULL, m = NULL)
         output$hess <- hess
         output$w <- w
         output$pval <- pval
+        class(output) <- "glm.hermite"
+        attr(output, "Call") <- Call 
+        attr(output, "x") <- X
         return(output)
       }
     }
@@ -210,6 +214,9 @@ glm.hermite <- function (formula, data, link = "log", start = NULL, m = NULL)
       output$fitted.values <- mu
       output$w <- w
       output$pval <- pval
+      class(output) <- "glm.hermite"
+      attr(output, "Call") <- Call 
+      attr(output, "x") <- X
       return(output)
     }
   }    
@@ -270,6 +277,9 @@ glm.hermite <- function (formula, data, link = "log", start = NULL, m = NULL)
     output$fitted.values <- mu
     output$w <- NA
     output$pval <- NA
+    class(output) <- "glm.hermite"
+    attr(output, "Call") <- Call 
+    attr(output, "x") <- X
     return(output)
   }
   
@@ -310,5 +320,8 @@ glm.hermite <- function (formula, data, link = "log", start = NULL, m = NULL)
   output$fitted.values <- mu
   output$w <- w
   output$pval <- pval
+  class(output) <- "glm.hermite"
+  attr(output, "Call") <- Call
+  attr(output, "x") <- X
   return(output)
 }
