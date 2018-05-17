@@ -1,4 +1,4 @@
-74a617c2bb0b931e9afe3d764128f5b8 *DESCRIPTION
+4d0943ae5c971447d41c3230b7b8406c *DESCRIPTION
 86d17a6fde6dfb65bd864db9b216a112 *NAMESPACE
 68cf19b8d8d95fea3afa03e229ee2cdd *R/cofi.R
 ad168f59d977cd835c4d83c393f34b81 *R/dhermite.R
@@ -15,7 +15,7 @@ bcb0fa705bece7e10e11ca7dbc79a1bf *data/hi_let.rda
 516873fc6073e698b43d1f0bae2e2b7a *man/dhermite.Rd
 4ef1514b8319310570f3043862bfc222 *man/glm.hermite.Rd
 ee6a1a9d4e1f40810da865945959d58c *man/hermite-internal.Rd
-5bbb486547bba360eb73097c48cd9e06 *man/hermite-package.Rd
+ca4bfffeb96f0be8cd20aa4e09ce5723 *man/hermite-package.Rd
 831e27ba592b30879f0c28354a1ccac7 *man/hi_let.Rd
 2bdd224127fed4153a951e6ead43d0b4 *man/hot100.Rd
 bcb8dc7849066402984b43a1a21c0cf9 *man/phermite.Rd

@@ -15,8 +15,8 @@ and regression models for the generalized Hermite distribution.
 \tabular{ll}{
 Package: \tab hermite\cr
 Type: \tab Package\cr
-Version: \tab 1.1.0\cr
-Date: \tab 2015-03-24\cr
+Version: \tab 1.1.2\cr
+Date: \tab 2018-05-17\cr
 License: \tab GPL version 2 or newer\cr
 LazyLoad: \tab yes\cr
 }
